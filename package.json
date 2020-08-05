@@ -2,7 +2,7 @@
   "name": "my-gym-planer-back-end",
   "version": "1.0.0",
   "description": "this is the back end of gym planner application",
-  "main": "app.js",
+  "main": "node app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

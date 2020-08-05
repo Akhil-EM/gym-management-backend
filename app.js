@@ -53,9 +53,7 @@ db.once('open',()=>{
     console.log( chalk.blueBright( "Successfully connected with mongodb "));
 })
 
-// app.listen(4040, function () {
-//   console.log(chalk.yellowBright("port 4040 is now active !!!"));
-// });
+
 app.listen(process.env.PORT||3000,()=>{
     console.log(chalk.yellowBright(`${chalk.blueBright("port "+process.env.PORT+"  is active")}`))
 });
