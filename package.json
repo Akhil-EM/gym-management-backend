@@ -2,9 +2,10 @@
   "name": "my-gym-planer-back-end",
   "version": "1.0.0",
   "description": "this is the back end of gym planner application",
-  "main": "node app.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "akhilemcalicut@gmail.com",
   "license": "ISC",
