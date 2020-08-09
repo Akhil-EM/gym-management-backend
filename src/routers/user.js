@@ -19,8 +19,8 @@ function route(){
                 phone:req.body.phone,
                 password:req.body.password,
                 type:req.body.type,
-                gymName:req.body.gymName
-             }
+                gymName:req.body.gymName,
+                ActiveStatus:req.body.ActiveStatus}
 
 
        var user=new userModel(user);
@@ -83,8 +83,7 @@ function route(){
         console.log(req.body);
         var logcre={
             email:req.body.email,
-            password:req.body.password
-        }
+            password:req.body.password}
         
         userModel.findOne(logcre,(err,data)=>{
             if (err) {
@@ -107,8 +106,7 @@ function route(){
                 phone:req.body.phone,
                 password:req.body.password,
                 type:req.body.type,
-                gymName:req.body.gymName
-         }
+                gymName:req.body.gymName}
         userModel.findByIdAndUpdate(req.body.id,{$set:user},
             (err,result)=>{
                 

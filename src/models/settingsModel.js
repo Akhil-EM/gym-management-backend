@@ -2,11 +2,13 @@ const mongoose=require('mongoose');
 const schema=mongoose.Schema;
 
 var settingsSchema = new schema({
+    week:String,
     gymName:String,
     timeDuration:String,
-    startingTime:Number,
-    endingTime:Number
+    startingTime:String,
+    endingTime:String,
+    memberPerSloat:String,
 });
-var settingsModel= mongoose.model('gym',settingsSchema);
+var settingsModel= mongoose.model('settings',settingsSchema);
 module.exports ={settingsModel};
 

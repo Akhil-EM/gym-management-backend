@@ -10,11 +10,11 @@ var app = new  express();
 
 //// requiring routers to use them
 const userRouter=require('./src/routers/user')();
-const adminRouter= require('./src/routers/admin')();
-const qustiRouter=require('./src/routers/question')();
-const fameRoute=require('./src/routers/wallOfFame')();
-const SmaterialRoute=require('./src/routers/Smaterials')();
 const gymRoute=require('./src/routers/gym')();
+const settingsRoute=require('./src/routers/settings')();
+const sloatsRoute=require('./src/routers/sloats')();
+const otherFunctionsRoute=require('./src/routers/otherlinks')();
+const bookingsRoute=require('./src/routers/bookings')();
 
 app.use(express.static(path.join(__dirname,"/public")));
 /////using body parser to handle requestes
@@ -27,11 +27,12 @@ app.use(bodyParser.urlencoded({
 /// telling wich router must use on corressponding requestes
 
 app.use('/users',userRouter);
-app.use('/admin',adminRouter);
-app.use('/question',qustiRouter);
-app.use('/famewall',fameRoute);
-app.use('/material',SmaterialRoute);
 app.use('/gym',gymRoute);
+app.use('/settings',settingsRoute);
+app.use('/sloats',sloatsRoute);
+app.use('/other-functions',otherFunctionsRoute);
+app.use('/bookings',bookingsRoute);
+
 
 app.get('/', function (req, res) {
   res.send('node works fine !!');

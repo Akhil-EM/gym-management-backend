@@ -8,7 +8,8 @@ var userSchema =new Schema({
     password:String,
     phone:Number,
     type:String,
-    gymName:String
+    gymName:String,
+    ActiveStatus:String
 });
 
 var userModel=mongoose.model('user',userSchema);
